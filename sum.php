@@ -84,7 +84,7 @@ echo "今" . date("y-m-d") ."\n";
 echo "来週" . date("y-m-d" , $nextweek) ."\n";
 
 //mktime
-echo "2019年 10月1日" . date("r" , mktime(0,0,0,10,1,2019)) , "\n";
+echo "2019年 10月1日" . date("l" , mktime(0,0,0,10,1,2019)) , "\n";
 echo date('c' , mktime(10,10,10,10,10,2019)) , "\n";
 
 //date

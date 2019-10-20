@@ -19,6 +19,27 @@ switch ($weekday) {
   default:
     echo "回収はありません。";
 }
+$a = 3;
+$b = 3;
+$c = "3";
+
+var_dump($a == $b);
+
+
+
+var_dump($a != $b);
+
+var_dump($a > $b);
+
+var_dump($a >= $b);
+
+var_dump($a < $b);
+
+var_dump($a <= $b);
+
+var_dump($a === $c);
+
+var_dump($a !== $c);
 
 
 for($i = 0; $i < 10; $i++){
