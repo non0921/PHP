@@ -30,42 +30,50 @@ arsort($array);
 print_r($array);
 
 //ここから課題です。課題1
-function tech($boost){
+function double_number($boost){
   $result = $boost * 2;
-  echo $result;
+  return $result;
 }
-echo tech(10);
+echo double_number(10);
+echo "\n";
 
 //課題2
-function s($a,$b){
+function a_b($a,$b){
   $result = $a + $b;
-  echo $result;
+  return $result;
 }
-echo s(5,4);
+echo a_b(5,4);
+echo "\n";
+
 //課題3
-function aa($arr){
+function arry($arr){
   $total = 1;
-  for($arr = 1; $arr <= 9; $arr += 2){
-    $total *= $arr;
+  foreach($arr as $ar){
+    $total *= $ar;
   }
   return $total;
 }
-echo aa(0);
+echo arry(array(1,3,5,7,9));
+echo "\n";
+
 //課題4
 function max_array($arr){
   $max_number = $arr[0];
   foreach($arr as $a){
     if($max_number < $a){
-      $max_number += $a;
+        $max_number = $a;
+      }
     }
-  }
   return $max_number;
 }
-echo max_array(array(10,8,5,4,2));
+echo max_array(array(8,10,4,20,5));
+echo "\n";
+
 //課題5 strip_tags
 $text = "<h1>Tech Boost<h1>
 <h2>non0921<h2>";
 echo strip_tags($text);
+echo "\n";
 
 //array_push
 $fruits = array("peach","apple");
@@ -80,15 +88,16 @@ print_r($result);
 
 //time
 $nextweek = time() + (7 * 24 * 60 * 60);
-echo "今" . date("y-m-d") ."\n";
-echo "来週" . date("y-m-d" , $nextweek) ."\n";
+echo "今" . date("y-m-d-l") ."\n";
+echo "来週" . date("y-m-d-l" , $nextweek) ."\n";
 
 //mktime
 echo "2019年 10月1日" . date("l" , mktime(0,0,0,10,1,2019)) , "\n";
 echo date('c' , mktime(10,10,10,10,10,2019)) , "\n";
 
 //date
-date_default_timezone_set("UTC");
+date_default_timezone_set("EET");
+echo date("j");
 echo date("l");
 echo "\n";
 ?>
